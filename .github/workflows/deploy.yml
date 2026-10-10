@@ -15,6 +15,7 @@ jobs:
       image: node:24-alpine
       
       env:
+        MONGODB_CONNECTION_PROTOCOL: mongodb
         MONGODB_CLUSTER_ADDRESS: mongodb
         MONGODB_USERNAME: root
         MONGODB_PASSWORD: example
