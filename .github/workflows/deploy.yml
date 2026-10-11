@@ -47,7 +47,7 @@ jobs:
         run: |
           echo "MONGODB_USERNAME: $MONGODB_USERNAME"
       - name: another step to run a container
-        uses: docker://ubuntu:latest
+        uses: docker://busybox
         with:
           entrypoint: ping
           args: -c 4 mongodb
