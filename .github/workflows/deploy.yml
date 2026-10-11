@@ -46,6 +46,11 @@ jobs:
       - name: Output information
         run: |
           echo "MONGODB_USERNAME: $MONGODB_USERNAME"
+      - name: another step to run a container
+        uses: docker://ubuntu:latest
+        with:
+          entrypoint: ping
+          args: -c 4 mongodb
   deploy:
     needs: test
     runs-on: ubuntu-latest
